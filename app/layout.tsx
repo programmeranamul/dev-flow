@@ -38,11 +38,11 @@ export default async function RootLayout({
 }>) {
 
 
-   const session = await auth();
+  //  const session = await auth();
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <SessionProvider session={session}>
+      {/* <SessionProvider session={session}> */}
       <body
         className={`${inter.className} ${spaceGrotesk.variable} antialiased`}
       >
@@ -57,7 +57,7 @@ export default async function RootLayout({
         </ThemeProvider>
         <Toaster />
       </body>
-      </SessionProvider>
+      {/* </SessionProvider> */}
     </html>
   );
 }
