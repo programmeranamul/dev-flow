@@ -26,7 +26,7 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
-    "**/.vscode": true,
+    "**/.vscode": false,
     "**/.next": true,
     "**/.git": true,
     "**/node_modules": true,
@@ -35,7 +35,7 @@
     "postcss.config.mjs": true,
     "package-lock.json": true,
     ".eslintrc.json": true,
-    ".gitignore": true,
+    ".gitignore": false,
     "next.config.ts": false,
     "components.json": true,
     "tsconfig.json": true,
