@@ -12,14 +12,16 @@ import { AskQuestionSchema } from "../validations";
 
 export async function createQuestion(
   params: CreateQuestionParams
-): Promise<ActionResponse> {
+): Promise<ActionResponse<Question>> {
   const validationResult = await action({
     params,
     schema: AskQuestionSchema,
     authorize: true,
   });
 
+
   if (validationResult instanceof Error) {
+   
     return handleError(validationResult) as ErrorResponse;
   }
 
@@ -34,6 +36,7 @@ export async function createQuestion(
       [{ title, content, author: userId }],
       { session }
     );
+
 
     if (!question) {
       throw new Error("Failed to create question");
