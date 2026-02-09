@@ -4,8 +4,8 @@ import React from "react";
 import ROUTES from "@/constants/routes";
 import { getTimeStamp } from "@/lib/utils";
 
-import Metric from "./../Metric";
 import TagCard from "./TagCard";
+import Metric from "../Metric";
 
 interface Props {
   question: Question;
@@ -45,6 +45,7 @@ const QuestionCard = ({
           href={ROUTES.PROFILE(author._id)}
           textStyles="body-medium text-dark400_light700"
           isAuthor
+          titleStyles="max-sm:hidden"
         />
 
         <div className="flex items-center gap-3 max-sm:flex-wrap max-sm:justify-start">
