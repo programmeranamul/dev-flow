@@ -30,6 +30,7 @@ const UserAvatar = ({
     .toUpperCase()
     .slice(0, 2);
 
+
   return (
     <Link href={ROUTES.PROFILE(id)}>
       <Avatar className={className}>
