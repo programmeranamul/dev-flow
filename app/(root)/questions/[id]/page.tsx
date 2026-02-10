@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import {unstable_after as after } from 'next/server';
+import { unstable_after as after } from "next/server";
 import React from "react";
 
 import TagCard from "@/components/cards/TagCard";
@@ -11,7 +11,6 @@ import UserAvatar from "@/components/UserAvatar";
 import ROUTES from "@/constants/routes";
 import { getQuestion, incrementViews } from "@/lib/actions/question.action";
 import { formatNumber, getTimeStamp } from "@/lib/utils";
-
 
 const QuestionDetails = async ({ params }: RouteParams) => {
   const { id } = await params;
@@ -91,7 +90,7 @@ const QuestionDetails = async ({ params }: RouteParams) => {
       </div>
 
       <section className="my-5">
-        <AnswerForm />
+        <AnswerForm questionId={question._id} />
       </section>
     </>
   );
